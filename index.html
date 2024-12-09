@@ -1,0 +1,335 @@
+]<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essência Floral - Floricultura</title>
+    <!-- CSS do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Ícones do Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #d6336c !important;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .nav-link {
+            color: #6c757d !important;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: #d6336c !important;
+        }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(Banner.png) no-repeat center center/cover;
+            height: 100vh;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom: 5px solid #d6336c;
+        }
+
+        #hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        #hero p {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        #hero .btn {
+            background-color: #d6336c;
+            border: none;
+            padding: 14px 35px;
+            font-size: 1.3rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #hero .btn:hover {
+            background-color: #a72854;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Seções */
+        section {
+            padding: 80px 0;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        #sobre {
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            padding: 40px 20px;
+        }
+
+        #produtos .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        #produtos .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        #produtos .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .card-text {
+            color: #6c757d;
+            font-weight: 300;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px 0;
+            border-top: 5px solid #d6336c;
+        }
+
+        footer a {
+            color: #d6336c;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Efeitos de borda e sombra nas seções */
+        #produtos, #sobre {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo das setas do carrossel */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #d6336c; /* Cor das setas */
+        }
+
+        .carousel-control-prev-icon:hover,
+        .carousel-control-next-icon:hover {
+            background-color: #a72854; /* Cor das setas ao passar o mouse */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Essência Floral</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h1>Bem-vindo à Essência Floral</h1>
+            <p>Transformamos momentos especiais com a beleza das flores.</p>
+            <a href="#produtos" class="btn btn-danger btn-lg">Confira Nossos Buquês</a>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Nós -->
+    <section id="sobre" class="container">
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <h2 class="text-danger fw-bold">Sobre Nós</h2>
+                <p class="lead text-muted">Na Essência Floral, somos apaixonados por criar buquês que capturam emoções e transformam momentos especiais. Com atenção aos detalhes e um toque personalizado, selecionamos as flores mais frescas e encantadoras para oferecer arranjos únicos. Nosso compromisso é entregar não apenas flores, mas experiências inesquecíveis, cheias de beleza e significado para cada ocasião.</p>
+                <button type="button" class="btn btn-danger mt-3" data-bs-toggle="modal" data-bs-target="#sobreModal">
+                    Saiba Mais
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="sobreModal" tabindex="-1" aria-labelledby="sobreModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="sobreModalLabel">Mais Sobre Nós</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Na <strong>Essência Floral</strong>, somos especializados em criar buquês exclusivos e arranjos florais únicos, feitos para expressar sentimentos e transformar qualquer ocasião. Nossa paixão pelas flores é refletida em cada arranjo, elaborado com flores frescas e cuidadosamente selecionadas para garantir a beleza e a qualidade de cada detalhe. Trabalhamos para criar experiências inesquecíveis, seja em casamentos, aniversários ou simples gestos de carinho.</p>
+                    <p>Nosso compromisso é oferecer um atendimento personalizado, entendendo suas necessidades e preferências para que cada buquê seja perfeito. Com uma equipe experiente e apaixonada, buscamos sempre a harmonia entre cores, formas e aromas, garantindo que nossas flores não só embelezem, mas também toquem o coração de quem as recebe.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção Produtos com Carrossel de Produtos -->
+    <section id="produtos" class="container">
+        <h2 class="text-center text-danger fw-bold mb-5">Nossos Produtos</h2>
+
+        <!-- Carrossel de Produtos -->
+        <div id="produtosCarrossel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Produto 1 -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="100rosas.png" class="card-img-top" alt="Buquê de Rosas">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Buquê de 100 Rosas</h5>
+                                    <p class="card-text">Um clássico da elegância e do romance.</p>
+                                    <p class="text-danger">R$ 1.150,00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="floresdocampo.png" class="card-img-top" alt="Mix de Flores">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Buquê de Flores do campo</h5>
+                                    <p class="card-text">Arranjo vibrante e colorido, para iluminar qualquer ambiente.</p>
+                                    <p class="text-danger">R$ 250,00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="rosacomgirassolgrande.png" class="card-img-top" alt="Girassóis">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Buquê de rosas com girassois</h5>
+                                    <p class="card-text">Simbolizando o sol, esses girassóis trazem alegria e frescor.</p>
+                                    <p class="text-danger">R$ 370,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Produto 2 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="braçada de rosas.png" class="card-img-top" alt="Orquídeas">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Braçada de rosas</h5>
+                                    <p class="card-text">Delicadas e sofisticadas, trazem um toque de luxo.</p>
+                                    <p class="text-danger">R$ 280,00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="buque de lirios.png" class="card-img-top" alt="Lírios">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Buquê de Lírios</h5>
+                                    <p class="card-text">Um buquê de lírios é elegante e sofisticado, simbolizando pureza.</p>
+                                    <p class="text-danger">R$ 265,00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <img src="flores mistas.png" class="card-img-top" alt="Buquê de Rosas">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Buquê com margaridas</h5>
+                                    <p class="card-text">É uma ótima opção para presentear amigos e familiares em datas importantes.</p>
+                                    <p class="text-danger">R$ 99,90</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Controles do Carrossel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#produtosCarrossel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#produtosCarrossel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="container" style="background-color: #fff; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); border-radius: 15px;">
+        <h2 class="text-center text-danger fw-bold mb-4">Entre em Contato</h2>
+        <form>
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="nome" placeholder="Seu nome">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="Seu e-mail">
+            </div>
+            <div class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea class="form-control" id="mensagem" rows="3" placeholder="Sua mensagem"></textarea>
+            </div>
+            <button type="submit" class="btn btn-danger">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <p>&copy; 2024 Essência Floral. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Scripts do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
